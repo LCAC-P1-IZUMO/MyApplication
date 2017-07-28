@@ -78,5 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         // [SubForm02へ遷移]ボタン
         m_btnSubForm02.setOnClickListener(onClick_btnSubForm02);
+
+        //**** 初期処理 ****//
     }
 }
