@@ -7,25 +7,33 @@ import android.widget.Button;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
-    //**************************//
-    //****** コントロール ******//
-    //**************************//
+    //**********************************************************
+    //******************    定数・列挙体    ********************
+    //**********************************************************
+
+    //**********************************************************
+    //******************     メンバ変数     ********************
+    //**********************************************************
+
+    //**********************************************************
+    //******************    コントロール    ********************
+    //**********************************************************
     /**
      * [SubForm01へ遷移]ボタン
      */
-    private Button mBtnSubForm01;
+    private Button m_btnSubForm01;
     /**
      * [SubForm02へ遷移]ボタン
      */
-    private Button mBtnSubForm02;
+    private Button m_btnSubForm02;
 
-    //**************************//
-    //**** イベントリスナー ****//
-    //**************************//
+    //**********************************************************
+    //******************  イベントリスナー  ********************
+    //**********************************************************
     /**
      * [SubForm01へ遷移]ボタンを押下した時の処理を定義
      */
-    private Button.OnClickListener mOnClick_btnSubForm01 = new Button.OnClickListener() {
+    private Button.OnClickListener onClick_btnSubForm01 = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
             // [SubForm01]を開く
@@ -36,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * [SubForm02へ遷移]ボタンを押下した時の処理を定義
      */
-    private Button.OnClickListener mOnClick_btnSubForm02 = new Button.OnClickListener() {
+    private Button.OnClickListener onClick_btnSubForm02 = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
             // [SubForm02]を開く
@@ -45,24 +53,30 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    //**************************//
-    //******** onCreate ********//
-    //**************************//
+    //**********************************************************
+    //******************      メソッド      ********************
+    //**********************************************************
+
+    //**********************************************************
+    //******************      onCreate      ********************
+    //**********************************************************
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // [SubForm01へ遷移]ボタンのインスタンスを取得
-        mBtnSubForm01 = (Button)findViewById(R.id.btnSubForm01);
+        //**** コントロールのインスタンスを取得 ****//
+        // [SubForm01へ遷移]ボタン
+        m_btnSubForm01 = (Button)findViewById(R.id.btnSubForm01);
 
-        // [SubForm01へ遷移]ボタンを押下した時の処理を設定
-        mBtnSubForm01.setOnClickListener(mOnClick_btnSubForm01);
+        // [SubForm02へ遷移]ボタン
+        m_btnSubForm02 = (Button)findViewById(R.id.btnSubForm02);
 
-        // [SubForm02へ遷移]ボタンのインスタンスを取得
-        mBtnSubForm02 = (Button)findViewById(R.id.btnSubForm02);
+        //**** コントロールにイベントリスナーを設定 ****//
+        // [SubForm01へ遷移]ボタン
+        m_btnSubForm01.setOnClickListener(onClick_btnSubForm01);
 
-        // [SubForm02へ遷移]ボタンを押下した時の処理を設定
-        mBtnSubForm02.setOnClickListener(mOnClick_btnSubForm02);
+        // [SubForm02へ遷移]ボタン
+        m_btnSubForm02.setOnClickListener(onClick_btnSubForm02);
     }
 }
