@@ -76,11 +76,11 @@ public class SubForm02 extends Activity {
         setContentView(R.layout.sub_form02);
 
         //**** コントロールのインスタンスを取得 ****//
-        // [名前]リストビュー
+        // [名前一覧]リストビュー
         m_lstNames = (ListView)findViewById(R.id.lstNames);
 
         //**** コントロールにイベントリスナーを設定 ****//
-        // [名前]リストビュー
+        // [名前一覧]リストビュー
         m_lstNames.setOnItemClickListener(onItemSelected_lstNames);
 
         //**** 初期処理 ****//
